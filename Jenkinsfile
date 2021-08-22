@@ -10,6 +10,13 @@ pipeline{
                 }
             }
         }
+        stage('functions'){
+            steps{
+                script{
+                    helloArgs.goodbyeWorld("Jenkins")
+                }
+            }
+        }
     }
     post{
         success{
